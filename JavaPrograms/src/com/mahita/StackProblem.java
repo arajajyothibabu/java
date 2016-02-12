@@ -1,7 +1,7 @@
 package com.mahita;
 
 import java.util.Scanner;
-
+import java.lang.Object;
 /**
  * Created by Araja Jyothi Babu on 24-01-2016.
  */
@@ -36,6 +36,10 @@ class Stack{
         this.capacity = capacity;
         this.stack = new int[capacity];
         topOfStack = -1;
+    }
+    protected void finalize(){
+        //destructor function
+        System.out.println("Destructor is called implicitly..!");
     }
     static boolean isFull(){
         return (topOfStack == capacity-1);
