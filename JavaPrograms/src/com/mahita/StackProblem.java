@@ -29,28 +29,34 @@ public class StackProblem {
 }
 
 class Stack{
-    int topOfStack;
-    int capacity = 0; //stack capacity
+    static int topOfStack;
+    static int capacity = 0; //stack capacity
     int []stack;
     Stack(int capacity){
         this.capacity = capacity;
         this.stack = new int[capacity];
         topOfStack = -1;
     }
+    static boolean isFull(){
+        return (topOfStack == capacity-1);
+    }
+    static boolean isEmpty(){
+        return (topOfStack == -1);
+    }
     void push(int element){
-        if(topOfStack < capacity-1)
+        if(!isFull())
             this.stack[++topOfStack] = element;
         else
             System.out.println("Stack overflow..!");
     }
     void pop(){
-        if(topOfStack != -1)
+        if(!isEmpty())
             System.out.println("Element popped is : " + this.stack[topOfStack--]);
         else
             System.out.println("Stack underflow..!");
     }
     void display(){
-        if(this.topOfStack == -1)
+        if(isEmpty())
             System.out.println("Stack is Empty..!");
         else
             System.out.println("Stack Elements : ");
