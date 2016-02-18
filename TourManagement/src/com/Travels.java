@@ -30,21 +30,16 @@ public class Travels implements BookingOperations{
         }
     }
 
-    public Vehicle makeBooking(Customer customer, int noOfSeats){
+    public Vehicle makeBooking(Customer customer, int noOfSeats) throws NoBookingException{
         Vehicle vehicle = null;
-        try{
-            for(int i=0;i< vehicleList.size(); i++){
-                vehicle = vehicleList.get(i);
-                if(vehicle.noOfSeats >= noOfSeats){
-                    vehicle.availability = false;
-                    return vehicle;
-                }
+        for(int i=0;i< vehicleList.size(); i++){
+            vehicle = vehicleList.get(i);
+            if(vehicle.noOfSeats >= noOfSeats){
+                vehicle.availability = false;
+                return vehicle;
             }
-            throw new NoBookingException(noOfSeats);
-        } catch(NoBookingException nbe){
-            nbe.getMessage();
         }
-        return vehicle;
+        throw new NoBookingException(noOfSeats);
     }
 
     public boolean cancelBooking(int vId){
@@ -61,7 +56,7 @@ public class Travels implements BookingOperations{
     }
 
     Set<Vehicle> getVehicleByFare(){
-        SortedSet<Vehicle> vehicleSet = new TreeSet<Vehicle>();
+        SortedSet<Vehicle> vehicleSet = new TreeSet<Vehicle>(vehicleList);
         return vehicleSet;
     }
 

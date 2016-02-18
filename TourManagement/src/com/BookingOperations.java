@@ -5,7 +5,7 @@ package com;
  */
 public interface BookingOperations {
 
-    Vehicle makeBooking(Customer customer, int noOfSeats);
+    Vehicle makeBooking(Customer customer, int noOfSeats) throws NoBookingException;
 
     boolean cancelBooking(int vId);
 
