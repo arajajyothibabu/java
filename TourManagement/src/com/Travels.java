@@ -21,7 +21,7 @@ public class Travels implements BookingOperations{
     }
 
     boolean addVehicle(Vehicle vehicle){
-        if(this.vehicleList.contains(vehicle)){
+        if(this.vehicleList.contains(vehicle) || vehicle == null){
             return false;
         }
         else{
@@ -43,6 +43,8 @@ public class Travels implements BookingOperations{
     }
 
     public boolean cancelBooking(int vId){
+        if(vehicleList == null)
+            return false;
         Vehicle vehicle;
         for(int i=0; i< vehicleList.size();i++){
             vehicle = vehicleList.get(i);
@@ -56,17 +58,31 @@ public class Travels implements BookingOperations{
     }
 
     Set<Vehicle> getVehicleByFare(){
-        SortedSet<Vehicle> vehicleSet = new TreeSet<Vehicle>(vehicleList);
+        TreeSet<Vehicle> vehicleSet = new TreeSet<Vehicle>(new VehicleComparator());
+        if(vehicleList != null) {
+            for (Vehicle vehicle : vehicleList) {
+                vehicleSet.add(vehicle);
+            }
+        }
         return vehicleSet;
     }
 
     Map<Integer, Vehicle> getVehicleMap(){
         Map<Integer, Vehicle> vehicleMap = new HashMap<Integer, Vehicle>();
         Vehicle vehicle;
-        for(int i=0;i<vehicleList.size(); i++){
-            vehicle = vehicleList.get(i);
-            vehicleMap.put(vehicle.vId, vehicle);
+        if(vehicleList != null) {
+            for (int i = 0; i < vehicleList.size(); i++) {
+                vehicle = vehicleList.get(i);
+                vehicleMap.put(vehicle.vId, vehicle);
+            }
         }
         return vehicleMap;
+    }
+}
+
+class VehicleComparator implements Comparator<Vehicle>{
+    @Override
+    public int compare(Vehicle v1, Vehicle v2) {
+        return v1.compareTo(v2);
     }
 }

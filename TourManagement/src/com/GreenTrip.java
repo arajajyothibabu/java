@@ -90,6 +90,8 @@ public class GreenTrip {
 		} catch (NoBookingException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Error in making booking"+e.getMessage());
+		} catch (NullPointerException npe){
+			System.out.println("Error in making booking NullPointerException "+ npe.getMessage());
 		}
 		System.out.println("*****************End Test Case 5******************");
 		
@@ -102,6 +104,8 @@ public class GreenTrip {
 		} catch (NoBookingException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Error in making booking"+e.getMessage());
+		} catch (NullPointerException npe){
+			System.out.println("Error in making booking NullPointerException "+ npe.getMessage());
 		}
 		System.out.println("*****************End Test Case 6******************");
 		
@@ -112,6 +116,8 @@ public class GreenTrip {
 		} catch (NoBookingException e) {
 			// TODO Auto-generated catch block
 			System.out.println("Error in making booking"+e.getMessage());
+		} catch (NullPointerException npe){
+			System.out.println("Error in making booking NullPointerException "+ npe.getMessage());
 		}
 		System.out.println("*****************End Test Case 7******************");
 		
