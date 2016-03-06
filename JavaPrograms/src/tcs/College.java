@@ -1,5 +1,4 @@
 package tcs;
-
 /**
  * Created by Araja Jyothi Babu on 25-02-2016.
  */
@@ -19,7 +18,7 @@ public class College {
     }
 
     String getNextId(){
-        return idPrefix + (roll<9? "0" : "" ) + roll+1;
+        return idPrefix + (roll<9? "0" : "" ) + (roll+1);
     }
 
     String addStudent(Student student){
@@ -29,7 +28,7 @@ public class College {
 
     String findStudent(String id){
         for(int i=0; i< roll; i++){
-            if(this.students[i].getId() == id){
+            if(this.students[i].getId().equals(id)){
                 return this.students[i].getName();
             }
         }

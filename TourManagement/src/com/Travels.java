@@ -32,6 +32,8 @@ public class Travels implements BookingOperations{
 
     public Vehicle makeBooking(Customer customer, int noOfSeats) throws NoBookingException{
         Vehicle vehicle = null;
+        if(vehicleList == null)
+            throw new NoBookingException(noOfSeats);
         for(int i=0;i< vehicleList.size(); i++){
             vehicle = vehicleList.get(i);
             if(vehicle.noOfSeats >= noOfSeats){
