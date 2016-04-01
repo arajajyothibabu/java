@@ -25,14 +25,9 @@ public class Histogram extends JPanel {
     public final int BLUE = 2;
 
     private int[][] colourBins;
-    private volatile boolean loaded = false;
+    private boolean loaded = false;
     private int maxY;
 
-    /**
-     *
-     * @param Path
-     *            of image to create Histogram of.
-     */
     public Histogram() {
         colourBins = new int[NUMBER_OF_COLOURS][];
 
@@ -102,7 +97,7 @@ public class Histogram extends JPanel {
                     g2.setColor(Color.blue);
                 }
 
-                // draw the graph for the spesific colour.
+                // draw the graph for the specific colour.
                 for (int j = 0; j < SIZE - 1 ; j++) {
                     int value = (int) (((double)colourBins[i][j] / (double)maxY) * getHeight());
                     int value2 = (int) (((double)colourBins[i][j+1] / (double)maxY) * getHeight());
@@ -116,14 +111,14 @@ public class Histogram extends JPanel {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Debug Frame");
-        frame.setSize(200, 200);
+        JFrame frame = new JFrame("Histogram");
+        frame.setSize(1200, 600);
         frame.setLayout(new BorderLayout());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Histogram his = new Histogram();
 
         try {
-            his.load("E:\\Pictures\\Welcome Scan.jpg");
+            his.load("A:\\GitHub\\Java Projects\\JavaPrograms\\src\\com\\jb\\gvp.jpg");
         } catch (IOException e) {
             e.printStackTrace();
         }

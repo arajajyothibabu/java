@@ -1,0 +1,13 @@
+.idea
+*.iml
+*.xml
+*.mf
+out
+build
+*.class
+*.prefs
+.project
+.metadata
+.recommenders
+.settings
+.classpath
