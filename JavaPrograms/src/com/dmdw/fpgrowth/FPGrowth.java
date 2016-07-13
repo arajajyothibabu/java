@@ -8,7 +8,7 @@ class FPGrowth
 {
     static int minSupportCount, numberOfItems;
     static Node root = new Node('0');
-    FPGrowth(int numberOfItems)
+    public FPGrowth(int numberOfItems)
     {
         this.numberOfItems = numberOfItems;
         minSupportCount = 2;
@@ -94,8 +94,7 @@ class FPGrowth
             System.out.println("Nodes of Generated Tree:\n----------");
             traversal(root);
         }
-        catch(Exception e)
-        {
+        catch(Exception e) {
             System.out.println("Error: "+ e );
         }
     }

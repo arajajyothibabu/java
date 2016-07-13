@@ -1,0 +1,24 @@
+tray.paperspec.papertype.count=14
+tray.paperspec.papersize.name.count=19
+tray.paperspec.papertype.name=mtStationery,,@mtStationery,100,@mtStationery,65,@mtStationeryCotton,,@mtStationery,,mcWhite@mtStationeryPrePrinted,,@mtRecycled,,@mtEnvelope,,@mtLabels,135,@mtCardStock,130,@mtStationeryBond,,@mtStationeryArchive,,@mtStationeryLetterhead,,@mtStationeryPrePunched,,
+tray.paperspec.papersize.name.mstCustom=,98~216,148~356,3.85~8.50,5.83~14,000000000000
+tray.paperspec.papersize.name.mstA4Sef=a,210,297,8.27,11.69,111111111111
+tray.paperspec.papersize.name.mstA5Sef=,148.5,210,5.85,8.27,11111110111111
+tray.paperspec.papersize.name.mstA5Lef=,210,148.5,8.27,5.85,10000000110111
+tray.paperspec.papersize.name.mstB5Sef=,176,250,6.93,9.84,11111111111111
+tray.paperspec.papersize.name.mstJisB5Sef=,182,257,7.17,10.12,11111110111111
+tray.paperspec.papersize.name.mstLegalSef=,215.9,355.6,8.5,14,11111110111111
+tray.paperspec.papersize.name.mstLetterSef=a,215.9,279,8.5,11,11111110111111
+tray.paperspec.papersize.name.mstStatementSef=a,139.7,215.9,5.5,8.5,11111110111111
+tray.paperspec.papersize.name.mstExecutiveSef=a,184.2,266.7,7.25,10.5,11111110111111
+tray.paperspec.papersize.name.mstFolioSef=a,216,330,8.5,13,11111110111111
+tray.paperspec.papersize.name.mstOficioSef=a,215.9,342.9,8.50,13.5,11111110111111
+tray.paperspec.papersize.name.mstA6Sef=a,105,148.5,4.13,5.85,10000000110111
+tray.paperspec.papersize.name.mstMonarchESef=,98.4,190.5,3.88,7.5,00000001000000
+tray.paperspec.papersize.name.mstDLESef=,110,220,4.33,8.66,00000001000000
+tray.paperspec.papersize.name.mstC5Sef=,162,229,6.38,9.02,00000001000000
+tray.paperspec.papersize.name.mstC6Sef=,114,162,4.49,6.38,00000001000000
+tray.paperspec.papersize.name.mstNo10Sef=,105,241,4.12,9.5,00000001000000
+tray.paperspec.papersize.name.mstPostcardSef=,101.6,152.4,4,6,00000000010000
+tray1.txtOpen
+Displaying tray1.txt.
