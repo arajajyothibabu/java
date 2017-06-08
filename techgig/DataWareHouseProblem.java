@@ -66,6 +66,7 @@ public class Main {
         Collections.sort(skillsWithWorks, new Comparator<Work>() {
             @Override
             public int compare(Work a, Work b) {
+                if(a.skill.equals(b.skill) && a.priority == b.priority) return Integer.compare(a.time, b.time);
                 return -Integer.compare(a.priority, b.priority);
             }
         });
