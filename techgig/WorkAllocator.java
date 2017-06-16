@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * Created by jyothi on 15/6/17.
  */
-public class WorkAllocetor {
+public class WorkAllocator {
 
     private Map<Integer, ArrayList<String>> prioritisedSkills = new TreeMap<Integer, ArrayList<String>>(Collections.reverseOrder()); //Map<P, List<S>> Sorted By Key
     private Set<Integer> priorities; //Set<P>
@@ -12,7 +12,7 @@ public class WorkAllocetor {
     private int pendingWorks = 0;
     private boolean stopAllocation = false; //flag to stop allocation
 
-    WorkAllocater(Set<Integer> priorities, HashMap<String, String> skillsOfWorkers){ //initialise allocator with set of priorities
+    WorkAllocator(Set<Integer> priorities, HashMap<String, String> skillsOfWorkers){ //initialise allocator with set of priorities
         this.priorities = priorities; //sorted in descending order for priorities
         this.skillsOfWorkers = skillsOfWorkers;
         this.workers = new ArrayList<String>(skillsOfWorkers.keySet());
